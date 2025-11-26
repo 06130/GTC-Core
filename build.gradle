@@ -357,3 +357,18 @@ idea.project.settings {
 
 apply from: 'gradle/scripts/publishing.gradle'
 apply from: 'gradle/scripts/extra.gradle'
+
+repositories {
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation "curse.maven:roboticparts-283377:3366534-deobf-sources-api"
+}
