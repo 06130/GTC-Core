@@ -371,4 +371,8 @@ repositories {
 
 dependencies {
     implementation "curse.maven:roboticparts-283377:3366534-deobf-sources-api"
+    implementation "curse.maven:gregtech-meowmelmuku-1262727:7042519-deobf-sources-api"
+    implementation "curse.maven:modularui-624243:6206809-deobf-sources-api"
+    implementation "curse.maven:ctm-267602:2915363-deobf-sources-api"
+    implementation "curse.maven:ae2-extended-life-570458:5411078-deobf-sources-api"
 }
