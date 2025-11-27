@@ -1,6 +1,5 @@
 package com.lingzero.gtc_core;
 
-import com.lingzero.gtc_core.common.item.item1;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
