@@ -1,6 +1,5 @@
 package com.lingzero.gtc_core;
 
-import com.lingzero.gtc_core.common.item.prosthesis.prosthesis_1;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

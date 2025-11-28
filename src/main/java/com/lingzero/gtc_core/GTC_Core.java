@@ -1,5 +1,6 @@
 package com.lingzero.gtc_core;
 
+import com.lingzero.gtc_core.common.item.prosthesis.network_interface;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -50,7 +51,7 @@ public class GTC_Core {
     {
         @Override
         public ItemStack createIcon() {
-            Item item = GameRegistry.findRegistry(Item.class).getValue(new ResourceLocation("cyberware", "blueprint"));
+            Item item = GameRegistry.findRegistry(Item.class).getValue(new ResourceLocation("gtc_core:", "network_interface"));
                 return new ItemStack(item);
         }
     };
@@ -59,7 +60,7 @@ public class GTC_Core {
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
             ItemRegistryHandler.registerItems(event);
+            event.getRegistry().register(new network_interface());
         }
     }
-
 }

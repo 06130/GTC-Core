@@ -16,8 +16,6 @@ GTC-Core 是一个基于 Minecraft 1.12.2 的 Forge 模组，专注于添加义�
 
 ## 项目结构
 - 核心类: GTC_Core.java
-- 物品注册: ItemRegistryHandler.java
-- 义肢实现: common/item/prosthesis/prosthesis_1.java
 
 ## 开发环境
 - Java 项目
