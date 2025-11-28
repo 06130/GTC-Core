@@ -1,35 +1,32 @@
 package com.lingzero.gtc_core.common.item.prosthesis;
 
-// 导入必要的类
 import com.lingzero.gtc_core.GTC_Core;
-
+import flaxbeard.cyberware.api.item.ICyberware;
 import flaxbeard.cyberware.common.CyberwareContent;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 import net.minecraft.util.NonNullList;
-import flaxbeard.cyberware.api.item.ICyberware;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import java.util.Collections;
 import java.util.List;
 
-public class network_interface extends Item implements ICyberware {
+public class originium_reactor extends Item implements ICyberware {
 
-    public network_interface() {
+    public originium_reactor() {
         setCreativeTab(GTC_Core.creativeTab);// 设置物品的创造菜单分组
-        setRegistryName(GTC_Core.MOD_ID, "network_interface"); // 设置物品注册名
-        setTranslationKey(GTC_Core.MOD_ID + ".network_interface"); // 设置物品未本地化名
+        setRegistryName(GTC_Core.MOD_ID, "originium_reactor"); // 设置物品注册名
+        setTranslationKey(GTC_Core.MOD_ID + ".originium_reactor"); // 设置物品未本地化名
     }
 
     // 获取物品安装的插槽类型
     @Override
-    public EnumSlot getSlot(ItemStack itemStack) {
-        return EnumSlot.CRANIUM;
+    public ICyberware.EnumSlot getSlot(ItemStack itemStack) {
+        return ICyberware.EnumSlot.LOWER_ORGANS;
     }
 
     // 获取物品安装后的堆叠大小
@@ -43,7 +40,7 @@ public class network_interface extends Item implements ICyberware {
     public NonNullList<NonNullList<ItemStack>> required(ItemStack itemStack) {
         NonNullList<NonNullList<ItemStack>> required = NonNullList.create();
         NonNullList<ItemStack> list = NonNullList.create();
-        list.add(new ItemStack(CyberwareContent.cybereyes));
+        list.add(new ItemStack(CyberwareContent.lowerOrgansUpgrades));
         required.add(list);
         return required;
     }
@@ -75,7 +72,7 @@ public class network_interface extends Item implements ICyberware {
 
     // 获取物品的质量等级
     @Override
-    public Quality getQuality(ItemStack itemStack) {
+    public ICyberware.Quality getQuality(ItemStack itemStack) {
         return null;
     }
 
@@ -87,7 +84,7 @@ public class network_interface extends Item implements ICyberware {
 
     // 检查物品是否可以持有指定的质量等级
     @Override
-    public boolean canHoldQuality(ItemStack itemStack, Quality quality) {
+    public boolean canHoldQuality(ItemStack itemStack, ICyberware.Quality quality) {
         return false;
     }
 
@@ -113,7 +110,10 @@ public class network_interface extends Item implements ICyberware {
     public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
 
-        tooltip.add(TextFormatting.BLUE + I18n.format("tooltip.gtc_core.network_interface.1"));
-        tooltip.add(TextFormatting.GREEN + I18n.format("tooltip.gtc_core.network_interface.2"));
+        tooltip.add(TextFormatting.BLUE + I18n.format("tooltip.gtc_core.originium_reactor.1"));
+        tooltip.add(TextFormatting.GREEN + I18n.format("tooltip.gtc_core.originium_reactor.2"));
+        tooltip.add(TextFormatting.RED + I18n.format("tooltip.gtc_core.originium_reactor.3"));
+        tooltip.add(TextFormatting.RED + I18n.format("tooltip.gtc_core.originium_reactor.4"));
     }
 }
+

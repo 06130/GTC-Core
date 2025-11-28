@@ -1,4 +1,13 @@
 
 itemGroup.gtc_core=GTC Core
 
+#network_interface 网络接入仓
 item.gtc_core.network_interface.name=网络接入仓
+tooltip.gtc_core.network_interface.1=技术提供方：格雷寰宇工业集团
+tooltip.gtc_core.network_interface.2=可与所有类型义体兼容，联动
+#originium_reactor 微型源石反应堆
+item.gtc_core.originium_reactor.name=微型源石反应堆
+tooltip.gtc_core.originium_reactor.1=技术提供方：终末地工业
+tooltip.gtc_core.originium_reactor.2=可与所有类型义体兼容，与同类型义体联动
+tooltip.gtc_core.originium_reactor.3=警告：运行中会产生源石微粒，需要配合过滤器使用
+tooltip.gtc_core.originium_reactor.4=占位符
